@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Vl-Td-aME">
+                                <rect key="frame" x="180" y="40" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Vl-Td-aME" secondAttribute="height" id="Ol3-nQ-LQ4"/>
+                                    <constraint firstAttribute="width" constant="240" id="duW-en-Z8R"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mj1-4h-PO3">
+                                <rect key="frame" x="278" y="330" width="43" height="30"/>
+                                <state key="normal" title="reload"/>
+                                <connections>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwp-4N-Lh7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEH-Yr-2c3">
+                                <rect key="frame" x="266" y="368" width="67" height="30"/>
+                                <state key="normal" title="download"/>
+                                <connections>
+                                    <action selector="download:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEI-4Y-JXO"/>
+                                    <action selector="reload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wz9-HW-Oel"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Vl-Td-aME" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="J0k-ee-iz8"/>
+                            <constraint firstItem="lEH-Yr-2c3" firstAttribute="top" secondItem="mj1-4h-PO3" secondAttribute="bottom" constant="8" id="Jh7-lT-Pw0"/>
+                            <constraint firstItem="mj1-4h-PO3" firstAttribute="centerX" secondItem="9Vl-Td-aME" secondAttribute="centerX" id="SEK-o9-Uh6"/>
+                            <constraint firstItem="mj1-4h-PO3" firstAttribute="top" secondItem="9Vl-Td-aME" secondAttribute="bottom" constant="50" id="hdA-YD-dro"/>
+                            <constraint firstItem="9Vl-Td-aME" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pO6-rJ-8SJ"/>
+                            <constraint firstItem="lEH-Yr-2c3" firstAttribute="centerX" secondItem="mj1-4h-PO3" secondAttribute="centerX" id="shl-po-fnu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="9Vl-Td-aME" id="7JT-Ey-4GL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
